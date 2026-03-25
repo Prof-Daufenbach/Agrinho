@@ -12,6 +12,13 @@ function mostrarPagina(idPagina) {
 function controlarEstufa(mensagem) {
     const status = document.getElementById('status-estufa');
     status.innerText = mensagem;
-    status.style.color = "#2e7d32";
-    status.style.fontWeight = "bold";
+    
+    // Define a cor baseada na mensagem
+    if (mensagem.includes('Irrigação')) {
+        status.style.color = "#2196f3"; // Azul
+    } else if (mensagem.includes('Ventilação')) {
+        status.style.color = "#ff9800"; // Laranja
+    } else if (mensagem.includes('Temperatura')) {
+        status.style.color = "#f44336"; // Vermelho
+    }
 }

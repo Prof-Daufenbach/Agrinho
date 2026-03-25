@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrinho 2026 - Estufa Sustentável</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,9 +12,9 @@
     <header>
         <h1>Agro Forte, Futuro Sustentável</h1>
         <nav>
-            <button onclick="mostrarPagina('simulador')">Simulador</button>
-            <button onclick="mostrarPagina('explicacao')">A Estufa</button>
-            <button onclick="mostrarPagina('agrinho')">O Agrinho</button>
+            <button class="nav-btn" onclick="mostrarPagina('simulador')">Simulador</button>
+            <button class="nav-btn" onclick="mostrarPagina('explicacao')">A Estufa</button>
+            <button class="nav-btn" onclick="mostrarPagina('agrinho')">O Agrinho</button>
         </nav>
     </header>
 
@@ -21,22 +22,23 @@
         <section id="simulador" class="pagina-ativa">
             <h2>Simulador de Estufa de Tomate</h2>
             <div class="card">
-                <p>Status atual: <span id="status-estufa">Aguardando comando...</span></p>
+                <p class="status-texto">Status atual: <span id="status-estufa">Aguardando comando...</span></p>
                 <div class="controles">
-                    <button class="btn-agro" onclick="controlarEstufa('Irrigação Ativada!')">Ligar Irrigação</button>
-                    <button class="btn-agro" onclick="controlarEstufa('Ventilação Ativada!')">Abrir Ventilação</button>
-                    <button class="btn-agro" onclick="controlarEstufa('Temperatura Ajustada!')">Controlar Temperatura</button>
+                    <button class="btn-agro btn-irrigacao" onclick="controlarEstufa('💧 Irrigação Ativada!')">Ligar Irrigação</button>
+                    <button class="btn-agro btn-ventilacao" onclick="controlarEstufa('🌬️ Ventilação Ativada!')">Abrir Ventilação</button>
+                    <button class="btn-agro btn-temp" onclick="controlarEstufa('🌡️ Temperatura Ajustada!')">Ajustar Temperatura</button>
                 </div>
             </div>
         </section>
 
         <section id="explicacao" class="hidden">
-            <h2>Como funciona a Estufa Sustentável?</h2>
+            <h2>Como funciona a Estufa?</h2>
             <div class="card">
-                <p>Nossa estufa utiliza sensores de umidade e temperatura para garantir que o tomateiro cresça no ambiente perfeito, economizando até 40% de água em comparação ao plantio tradicional.</p>
-                <ul>
-                    <li><strong>Energia Solar:</strong> Todo o sistema é alimentado por painéis fotovoltaicos.</li>
-                    <li><strong>Reuso de Água:</strong> Captação da água da chuva para irrigação.</li>
+                <p>Nossa estufa utiliza tecnologia de ponta para garantir a sustentabilidade.</p>
+                <ul class="lista-info">
+                    <li>🌱 <strong>Sensores Inteligentes:</strong> Monitoram umidade e temperatura em tempo real.</li>
+                    <li>☀️ <strong>Energia Limpa:</strong> Alimentada por painéis solares integrados.</li>
+                    <li>💧 <strong>Economia de Água:</strong> Sistema de gotejamento que reduz o desperdício em 40%.</li>
                 </ul>
             </div>
         </section>
@@ -44,10 +46,10 @@
         <section id="agrinho" class="hidden">
             <h2>Sobre o Concurso Agrinho</h2>
             <div class="card">
-                <p>O Programa Agrinho incentiva a sustentabilidade e a inovação nas escolas, conectando o saber acadêmico com a realidade do campo.</p>
+                <p>O Agrinho incentiva jovens a pensar no futuro do campo com inovação e respeito ao meio ambiente.</p>
                 <div class="galeria">
-                    <img src="https://via.placeholder.com/300x200?text=Imagem+Agrinho+1" alt="Imagem Agrinho 1">
-                    <img src="https://via.placeholder.com/300x200?text=Imagem+Agrinho+2" alt="Imagem Agrinho 2">
+                    <img src="https://via.placeholder.com/300x200/4caf50/ffffff?text=Inovação+no+Campo" alt="Imagem Agrinho 1">
+                    <img src="https://via.placeholder.com/300x200/ff9800/ffffff?text=Educação+Sustentável" alt="Imagem Agrinho 2">
                 </div>
             </div>
         </section>
